@@ -13,8 +13,8 @@ versus
 ### ADD TO PATH
 ```bash
 sudo apt-get update
-echo $PATH
-echo "hello world"
+	echo $PATH
+		echo "hello world"
 ```
 	<code> echo $PATH </code> *This will show what is currently in your path*
 
