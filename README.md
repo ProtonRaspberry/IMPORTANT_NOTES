@@ -12,5 +12,11 @@ as useful commands.
 
 If you forget "how to git", here is a [link](https://www.raspberrypi.org/learning/getting-started-with-git/worksheet/)
 
+### As a summary:
+* (edit or add a new file to IMPORTANT_NOTES folder)
+* git add --all
+* git commit -am
+* git push -u origin master
+
 end
 ---
