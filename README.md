@@ -19,10 +19,11 @@ If you forget "how to git", here is a [link](https://www.raspberrypi.org/learnin
 * git commit -am		*commits changes*
 * git push -u origin master	*pushes all files and changes to github*
 
-'''
+<pre>
+<code>yes | script</code>
+</pre>
 sudo apt-get update
 git add -all
-'''
 
 
 
