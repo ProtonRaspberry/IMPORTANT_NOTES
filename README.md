@@ -10,7 +10,10 @@ learning how to program.
 It lists important things I would like to remember as
 as useful commands.
 
+---
 If you forget "how to git", here is a [link](https://www.raspberrypi.org/learning/getting-started-with-git/worksheet/)
+RaspberryPi [Resource](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md)
+---
 
 ### As a summary:
 * (edit or add a new file to IMPORTANT_NOTES folder)
@@ -22,9 +25,10 @@ If you forget "how to git", here is a [link](https://www.raspberrypi.org/learnin
 <pre>
 <code>yes | script</code>
 </pre>
+'''python
 sudo apt-get update
 git add -all
-
+'''
 
 
 end
