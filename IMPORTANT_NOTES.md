@@ -24,7 +24,7 @@ and here is a block of code.
 
 ### TO FIND A FILE
 	# Use find function
-		find / -name \*.jpg			# finds all jpgs anywhere on the system
+		'find / -name \*.jpg'			# finds all jpgs anywhere on the system
 		find /home -name \*.jpg		# finds all jpgs anywhere in home directory and below
 		find /home -iname \*.jpg	   # finds all jpgs anywhere in home directory regardless of capitalization
 		find / -mtime +6			   # finds all files modified MORE than 6 days ago
