@@ -46,7 +46,9 @@ and here is a block of code.
 	# Instead of the output being sent to the terminal, it will be written to the text file
 	# and then it will say "All Finished" in the command line to let you know that it is finished
 ---
-### SEND EMAILS
+### SEND EMAILS AND SMS TEXT MESSAGES
+##### For email:
+
 I got this tutorial from [raspberry-projects.com](http://www.raspberry-projects.com/pi/software_utilities/email/ssmtp-to-send-emails)
 
 ```bash
@@ -73,6 +75,26 @@ echo "Hello world email body" | mail -s "Test Subject" recipientname@domain.com
 sudo apt-get install mpack
 mpack -s "Test /home/pi/some_folder/somefile.ext recipientname@domain.com
 ```
+
+##### For SMS:
+
+I found this information from [raspberrypi.org](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=69286)
+
+There is a tutorial there for another method, or you could just do this (it worked for me)
+
+```
+Try sms via email
+here is a list by provider
+Provider Format
+Sprint phonenumber@messaging.sprintpcs.com
+Verizon phonenumber@vtext.com
+T-Mobile phonenumber@tmomail.net
+AT&T phonenumber@txt.att.net
+AIM +1phonenumber
+```
+
+---
+
 
 
 
