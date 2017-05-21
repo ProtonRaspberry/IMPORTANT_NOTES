@@ -14,9 +14,10 @@ If you forget "how to git", here is a [link](https://www.raspberrypi.org/learnin
 
 ### As a summary:
 * (edit or add a new file to IMPORTANT_NOTES folder)
-* git add --all
-* git commit -am
-* git push -u origin master
+* cd IMPORTANT_NOTES		*You must be in the folder!*
+* git add --all			*adds all files*
+* git commit -am		*commits changes*
+* git push -u origin master	*pushes all files and changes to github*
 
 end
 ---
