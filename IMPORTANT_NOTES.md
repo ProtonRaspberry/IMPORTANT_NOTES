@@ -65,7 +65,7 @@ FromLineOverride=YES
 UseSTARTTLS=YES
 ```
 #### To send an email type:
-'echo "Hello world email body" | mail -s "Test Subject" recipientname@domain.com'
+`echo "Hello world email body" | mail -s "Test Subject" recipientname@domain.com`
 #### To send a file
 '''bash
 sudo apt-get install mpack
