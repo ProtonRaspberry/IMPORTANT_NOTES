@@ -17,10 +17,10 @@ and here is a block of code.
 ```
 
 ### ADD TO PATH
-- `echo $PATH` *This will show what is currently in your path*
-- `env | grep PATH`*This does the same thing*
-- `export PATH=/home/pi/:$PATH` *Put this in .bashrc to add to path*
-- `source ~/.bashrc` *This activates the changes made so that a new terminal does not need to be opened*
+- `echo $PATH` **This will show what is currently in your path**
+- `env | grep PATH`**This does the same thing**
+- `export PATH=/home/pi/:$PATH` **Put this in .bashrc to add to path**
+- `source ~/.bashrc` **This activates the changes made so that a new terminal does not need to be opened**
 
 ### TO FIND A FILE
 	# Use find function
