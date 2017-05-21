@@ -64,9 +64,9 @@ AuthPass=TheGmailPassword
 FromLineOverride=YES
 UseSTARTTLS=YES
 ```
-##### To send an email type:
+#### To send an email type:
 'echo "Hello world email body" | mail -s "Test Subject" recipientname@domain.com'
-##### To send a file
+#### To send a file
 '''bash
 sudo apt-get install mpack
 mpack -s "Test /home/pi/some_folder/somefile.ext recipientname@domain.com'
