@@ -29,6 +29,11 @@ RaspberryPi [Resource](https://www.raspberrypi.org/documentation/remote-access/s
 sudo apt-get update
 git add -all
 '''
+I think I'm getting the hang of this
+'''bash
+sudo apt-get update
+git add -all
+'''
 
 
 end
