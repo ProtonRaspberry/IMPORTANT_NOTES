@@ -23,7 +23,7 @@ RaspberryPi [Resource](https://www.raspberrypi.org/documentation/remote-access/s
 * git push -u origin master	*pushes all files and changes to github*
 
 <pre><code>
-	yes | script
+yes | script
 </code></pre>
 '''python
 sudo apt-get update
