@@ -1,5 +1,4 @@
 
-
 # IMPORTANT_NOTES
 These are very important things that I have learned while programming.
 Some of the things listed here are just some useful commands incase
@@ -12,11 +11,13 @@ versus
 
 
 ### ADD TO PATH
-	echo $PATH						# This will show what is currently in your path
-	env | grep PATH					# This does the same thing
-	export PATH=/home/pi/:$PATH		# Put this in .bashrc to add to path
-	source ~/.bashrc				# This activates the changes made so that a new
-									# terminal does not need to be opened
+
+	<code> echo $PATH </code> *This will show what is currently in your path*
+
+<code> env | grep PATH </code> *This does the same thing*
+
+export PATH=/home/pi/:$PATH # Put this in .bashrc to add to path
+source ~/.bashrc # This activates the changes made so that a new terminal does not need to be opened
 
 ### TO FIND A FILE
 	# Use find function
@@ -29,18 +30,18 @@ versus
 		apt-get install mlocate		# installs software
 		updatedb					# need to rund this everytime to update software
 		locate myfile.jpg			# finds location of file
-		
+
 ### MULTIPLE COMMANDS
 	# Command2 will be executed if (and only if) command 1 returns exit status zero
 		command1 && command2
 	# Both command1 and command2 will be executed regardless
 		command1 ; command2
-		
+
 ### PRINT OUTPUT TO A FILE
 	sudo apt-get update > out.txt && echo All Finished
 	# Instead of the output being sent to the terminal, it will be written to the text file
 	# and then it will say "All Finished" in the command line to let you know that it is finished
-	
+
 
 
 
@@ -50,5 +51,3 @@ versus
 
 end
 ---
-	
-
