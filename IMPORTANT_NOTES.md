@@ -4,7 +4,7 @@ These are very important things that I have learned while programming.
 Some of the things listed here are just some useful commands incase
 that I forget them.
 
-### TO WRITE CODE
+## TO WRITE CODE
 <pre><code>yes | script </code></pre>
 versus
 
