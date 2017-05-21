@@ -34,18 +34,42 @@ and here is a block of code.
 		apt-get install mlocate	    # installs software
 		updatedb					   # need to rund this everytime to update software
 		locate myfile.jpg			  # finds location of file
-
+---
 ### MULTIPLE COMMANDS
 	# Command2 will be executed if (and only if) command 1 returns exit status zero
 		command1 && command2
 	# Both command1 and command2 will be executed regardless
 		command1 ; command2
-
+---
 ### PRINT OUTPUT TO A FILE
 	sudo apt-get update > out.txt && echo All Finished
 	# Instead of the output being sent to the terminal, it will be written to the text file
 	# and then it will say "All Finished" in the command line to let you know that it is finished
+---
+### SEND EMAILS
+I got this tutorial from [raspberry-projects.com](http://www.raspberry-projects.com/pi/software_utilities/email/ssmtp-to-send-emails)
 
+```bash
+sudo apt-get install ssmtp
+sudo apt-get install mailutils
+sudo nano /etc/ssmtp/ssmtp.conf
+```
+(include in this file)
+```bash
+root=postmaster
+mailhub=smtp.gmail.com:587
+hostname=raspberrypi
+AuthUser=AGmailUserName@gmail.com
+AuthPass=TheGmailPassword
+FromLineOverride=YES
+UseSTARTTLS=YES
+```
+#####To send an email type:
+'echo "Hello world email body" | mail -s "Test Subject" recipientname@domain.com'
+#####To send a file
+'''bash
+sudo apt-get install mpack
+mpack -s "Test /home/pi/some_folder/somefile.ext recipientname@domain.com'
 
 
 
