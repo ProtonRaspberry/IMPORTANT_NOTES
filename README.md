@@ -22,9 +22,7 @@ RaspberryPi [Resource](https://www.raspberrypi.org/documentation/remote-access/s
 * git commit -am		*commits changes*
 * git push -u origin master	*pushes all files and changes to github*
 
-<pre><code>
-yes | script
-</code></pre>
+<pre><code>yes | script</code></pre>
 '''python
 sudo apt-get update
 git add -all
