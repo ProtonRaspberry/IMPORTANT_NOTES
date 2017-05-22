@@ -99,8 +99,5 @@ AIM +1phonenumber
 
 
 
-
-
-
-end
+EOF (end of file)
 ---
