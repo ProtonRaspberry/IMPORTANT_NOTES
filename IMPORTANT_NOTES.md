@@ -51,6 +51,8 @@ and here is a block of code.
 
 I got this tutorial from [raspberry-projects.com](http://www.raspberry-projects.com/pi/software_utilities/email/ssmtp-to-send-emails)
 
+Another great [resource](http://iqjar.com/jar/sending-emails-from-the-raspberry-pi/)
+
 ```bash
 sudo apt-get install ssmtp
 sudo apt-get install mailutils
