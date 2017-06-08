@@ -29,3 +29,7 @@ echo -e "${CYAN}Performing upgrades...${NC}"
 sudo apt-get upgrade
 ErrorFunc
 
+echo -e "${CYAN}Autoremoving redundancies...${NC}"
+sudo apt-get autoremove
+ErrorFunc
+
