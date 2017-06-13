@@ -75,10 +75,10 @@ echo "Hello world email body" | mail -s "Test Subject" recipientname@domain.com
 #### To send a file
 ```bash
 sudo apt-get install mpack
-mpack -s "Test /home/pi/some_folder/somefile.ext recipientname@domain.com
+mpack -s "Test /home/pi/some_folder/somefile.ext recipientname@domain.com"
 ```
 
-##### For SMS:
+#### For SMS:
 
 I found this information from [raspberrypi.org](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=69286)
 
@@ -94,11 +94,59 @@ T-Mobile phonenumber@tmomail.net
 AT&T phonenumber@txt.att.net
 AIM +1phonenumber
 ```
+---
+### Samba File Server
+
+```bash
+sudo apt-get update
+sudo apt-get install samba samba-common-bin
+```
+Now to edit the `.conf` file:
+
+`sudo nano /etc/samba/smb.conf` and edit/add these lines to the file:
+
+```
+workgroup = WORKGROUP
+wins support = yes
+
+[pi]
+	comment = Pi Server
+	path = /
+	browseable = yes
+	writeable = yes
+	only guest = no
+	create mask = 0777
+	directory mask = 0777
+	public = no
+
+	force user = root
+```
+###### NOTE: that what ever is in those brackets must be the path in the computer.  By default, this is "pi".  If something else is written there, it will not work.
+
+Exit the `.conf` file and type this into the terminal:
+
+```bash
+sudo smbpasswd -a pi          # (enter password and confirm)
+sudo smbpasswd -a root        # (enter password and confirm)
+sudo service smbd restart     # restarts the samba service
+```
+You may use `testparm` in the terminal to test the `.conf` file for syntax errors. (This is a built-in command when you installed samba)
+
+You will now see **RASPBERRYPI** under **network** in the file explorer
+
+Three references were used to do this:
+- [one](http://raspberrywebserver.com/serveradmin/share-your-raspberry-pis-files-and-folders-across-a-network.html)
+- [two](https://www.theurbanpenguin.com/setting-up-a-samba-server-on-raspberry-pi/)
+- [three](https://askubuntu.com/questions/754572/cannot-restart-samba-samba-service-is-masked)
 
 ---
 
 
 
+
+
+
+---
 > This is pretty neat!
 
 EOF (end of file)
