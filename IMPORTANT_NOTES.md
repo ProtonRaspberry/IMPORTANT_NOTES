@@ -4,6 +4,11 @@ These are very important things that I have learned while programming.
 Some of the things listed here are just some useful commands incase
 that I forget them.
 
+### Atom (install this text editor)
+Atom has a great markdown preview option so that you can see how it will look before committing the file to github.
+
+Also, go to `packages` at the top Atom toolbar, then `setting view`, then `Install Packages/Themes`.  Search for `markdown-scroll-sync` by [mark-hahn](https://atom.io/packages/markdown-scroll-sync).  It is awesome and will automatically scroll while you edit.
+
 ### TO WRITE CODE
 <pre><code>yes | script </code></pre>
 versus
@@ -22,7 +27,7 @@ and here is a block of code.
 - `env | grep PATH`**This does the same thing**
 - `export PATH=/home/pi/:$PATH` **Put this in .bashrc to add to path**
 - `source ~/.bashrc` **This activates the changes made so that a new terminal does not need to be opened**
-
+---
 ### TO FIND A FILE
 	# Use find function
 		find / -name \*.jpg			# finds all jpgs anywhere on the system
@@ -75,7 +80,7 @@ echo "Hello world email body" | mail -s "Test Subject" recipientname@domain.com
 #### To send a file
 ```bash
 sudo apt-get install mpack
-mpack -s "Test /home/pi/some_folder/somefile.ext recipientname@domain.com"
+mpack -s "Test" /home/pi/some_folder/somefile.ext recipientname@domain.com
 ```
 
 #### For SMS:
@@ -140,11 +145,73 @@ Three references were used to do this:
 - [three](https://askubuntu.com/questions/754572/cannot-restart-samba-samba-service-is-masked)
 
 ---
+### Python (The Basics)
+The following needs to be included at the beginning of python scripts:
+```python
+#!/usr/bin/python
+import RPi.GPIO as GPIO		# imports the Pi's GPIO
+import time					# imports time (for sleep functions, etc)
+import spidev                  # imports the SPI interface for analogue inputs
+
+spi = spidev.SpiDev()
+spi.open(0,0)
+
+# Now you should define all functions you may have
+def MyFunction(InputParameter)
+    try:
+			while True:
+				if GPIO.input(17):
+					print("LED off")
+				else:
+					pass
+				time.sleep(0.1)
+# Now that functions are all finished, set up the GPIO:
+GPIO.setmode(GPIO.BCM)			    # or set to GPIO.BOARD for board numbering system
+GPIO.setup(PinNumber, GPIO.IN)		# sets a particular pin as input
+GPIO.setup(PinNumber, GPIO.OUT)	   # sets a particular pin as output
+
+GPIO.output(PinNumber, GPIO.LOW)	  # initializes the pin to low, 0.0[V]
+GPIO.output(PinNumber, GPIO.HIGH)	 # initializes the pin to high, +3.3[V]
+
+try:
+	while True:
+		if Something:
+			print("SomeNonsense")
+		else:
+			pass
+		time.sleep(0.1)
+
+# Exception so that Ctrl+C can interrupt our program
+except KeyboardInterrupt:
+	print("\n Ctrl+C has been pressed!")
+
+# No matter how this program is terminated, this block of code will always run
+# It is good practice to cleanup the GPIO.  Put this at the end of every single
+# program that you write.
+finally:
+	spi.close()
+	GPIO.cleanup()
+```
+**Remember that bash and python boolean data is different**
+
+for bash:
+- `True = 0`
+- `False = 1`
+
+for python:
+- `True = 1`
+- `False = 0`
+---
+
+### Soil Moisture Sensor
 
 
 
 
 
+### NewTitleHere
+### NewTitleHere
+### NewTitleHere
 
 ---
 > This is pretty neat!
