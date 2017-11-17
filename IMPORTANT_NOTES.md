@@ -209,6 +209,16 @@ for python:
 
 
 
+### Start Program on Boot
+
+- `sudo nano /etc/rc.local` This lets you put the command to start a program on boot.  There are several ways to do it - this is just one of them.  Add the command to the end of the file:
+
+- `sudo python NameOfYourProgram.py &` The `&` is very important or else the computer will not boot.
+
+- For the washing Machine, I have `sudo /home/pi/MY_SCRIPTS/WashingMacineBash &`, which then exectutes a bash script.  This bash script, then executes a the washing machine python script (which is an infinite loop).
+
+- Once the final shutdown sequence is initiated, the python script will exit and go back to the bash script where it left off.  The bash script gives the command for actual shutdown `sudo shutdown -h now`
+
 ### NewTitleHere
 ### NewTitleHere
 ### NewTitleHere
