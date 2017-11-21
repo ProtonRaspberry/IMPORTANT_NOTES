@@ -216,12 +216,23 @@ for python:
 - `sudo python NameOfYourProgram.py &` The `&` is very important or else the computer will not boot.
 
 - For the washing Machine, I have:
-<pre>sudo /home/pi/MY_SCRIPTS/WashingMacineBash &</pre>
+<pre>sudo /home/pi/MY_SCRIPTS/WashingMachineBash &</pre>
 at the end of the script, which then executes a bash script.  This bash script, then executes a the washing machine python script (which is an infinite loop).
 
 - Once the final shutdown sequence is initiated, the python script will exit and go back to the bash script where it left off.  The bash script gives the command for actual shutdown `sudo shutdown -h now`
 ---
 
+### Installing SciPy, Numpy, and Matplotlib
+These commands may be found [here](https://www.scipy.org/install.html).  
+To install, SciPy, Numpy, and Matplotlib (among others), type the following:
+
+`sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose`
+
+**Warning: This will install over 100 items and will take close to 2GB of space.**  This installs everything needed for a MATLAB-like environment and much more.
+
+---
+
+### NewTitleHere
 ### NewTitleHere
 ### NewTitleHere
 ### NewTitleHere
